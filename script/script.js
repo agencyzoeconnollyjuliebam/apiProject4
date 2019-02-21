@@ -14,37 +14,44 @@ adoptApp.apiUrl = `http://api.petfinder.com/pet.find`;
     // adoptApp.userInput();
 //}
 
-adoptApp.getItems = function(){
+adoptApp.getItems = function(location){
     $.ajax({
         url: adoptApp.apiUrl,
-        //method:'GET',
+        method:'GET',
         jsonp: "callback",
         dataType: "jsonp",
         data: {
             key: adoptApp.apiKey,
-            //zip or postal code (is it case sensitive)
-            location: adoptApp.location,
+            //make sure its city  and provence 
+            location: location,
             output: 'basic',
             format: 'json'
         }
     }).then((results) => {
-        console.log(results)//TBD
+        console.log(results.petfinder.pets.pet)//TBD
     })
 }
 
-adoptApp.getItems();
+// adoptApp.getItems();
 adoptApp.location = function (){
-    $('#location').on('submit', function(){
-        const location = $(this).val();
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        const location = $(this).find('#location').val();
+        console.log(location)
         adoptApp.getItems(location);
         
     }) 
 }
 
-// $(document).ready(function(){
-//     adoptApp.init();
-// })
+$(document).ready(function(){
+    adoptApp.init();
+})
 
+
+adoptApp.init = function(){
+    adoptApp.location();
+    // adoptApp.getItems();
+}
  //create variable to hold users input(location)
 
 // make an ajax request to petFinder API with user's input (location)
