@@ -23,26 +23,29 @@ adoptApp.getItems = function(){
         data: {
             key: adoptApp.apiKey,
             //zip or postal code (is it case sensitive)
-            location: 'L3P2C6',
+            location: adoptApp.location,
             output: 'basic',
             format: 'json'
         }
     }).then((results) => {
-        console.log(results)
+        console.log(results)//TBD
     })
 }
 
 adoptApp.getItems();
+adoptApp.location = function (){
+    $('#location').on('submit', function(){
+        const location = $(this).val();
+        adoptApp.getItems(location);
+        
+    }) 
+}
 
 // $(document).ready(function(){
 //     adoptApp.init();
 // })
 
  //create variable to hold users input(location)
-    // $('.locationQ input').submit(function(){
-    //     alert(this).val();
-    // })
-
 
 // make an ajax request to petFinder API with user's input (location)
 
@@ -52,3 +55,6 @@ adoptApp.getItems();
 //take location object and filter the object based on user pet choice
 
 //On submit, run function and print to page relative pet infrmation - img, cat/dog, adoption status, size, shelter ID
+
+//notes:
+// on submit get the usersInput value  of location  and inserted in the ajx call data
