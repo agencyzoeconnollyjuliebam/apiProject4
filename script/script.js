@@ -1,10 +1,8 @@
 //Create object to hold all app methods
 const adoptApp = {};
 
-//var that hold api key information
+//varibale that hold api key / url information
 adoptApp.apiKey = 'dae1c1f938764d69b48d05aa508b352e';
-adoptApp.apiKeySecret ='d2daaca6e8ab78541a2dce99582e5aa0';
-//adoptApp.apiUrl = `http://api.petfinder.com/pet.find?key=${adoptApp.apiKey}&location=city`;
 adoptApp.apiUrl = `http://api.petfinder.com/pet.find`;
 
 //Our document ready
@@ -15,9 +13,13 @@ $(document).ready(function(){
 //Initializing the app
 adoptApp.init = function(){
     adoptApp.location();
+    $('.gallery').on('click', 'button', function () {
+        console.log('button being clicked')
+        $(`.discription`).toggleClass('hide');
+    })
 }
 
-//Making Ajax call with userInput
+//Making Ajax call with userInput location
 adoptApp.getItems = function(location){
     $.ajax({
         url: adoptApp.apiUrl,
@@ -32,13 +34,7 @@ adoptApp.getItems = function(location){
             format: 'json'
         }
     }).then((results) => {
-        // This is where we put code that will print the data to page
         adoptApp.print(results.petfinder.pets.pet);
-
-
-
-
-        console.log(results.petfinder.pets.pet)//TBD
     })
 }
 
@@ -47,73 +43,35 @@ adoptApp.location = function (){
     $('form').on('submit', function(e){
         e.preventDefault();
         const location = $(this).find('#location').val();
-        console.log(location)
-        adoptApp.getItems(location);
-        
+        console.log("location:", location)
+        adoptApp.getItems(location);   
     }) 
 }
 
-
 // take result from ajax call and print to page
-
 adoptApp.print = function (pets){
     pets.forEach(function(pet) {
         if(pet.media.photos.photo) {
-            const images = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
-          console.log(images);
-        
-      
-
-          
-    
- 
-    // $(`.results .gallary`).append(
-    //     `<div class="petCrate">
-    //     <div class="img"><img src="${images[0].src}" alt="${images[0].alt}"><div>
-      // <div class="petInfo">
-//              <p>pet:${animal}</p
-//              <p>age:${age}</p>
-//              <p>size:${size}</p>
-    //     <buttion class="moreInfo">more info</button>
-    //     </div>
-    //     <div class="discription"></div>
-    // </div>`
-    // );
-
-
-//Jonathan's example
-            // const markup = `
-            
-            // `
-
-            // pets.forEach((pet,index) => {
-            //     const markup `
-            //         Pet number ${index} is ${arraysomething[index]}
-            //     `
-
-            //     $('.list-parent').append(markup)
-            // })
-
-            // console.log(pet.media.photos.photo[0].$t)
-            // $('.results .gallery').append(`<div class="petCrate"></div>`)
-            // $('.results .gallery .petCrate').append(`<div class="petImage"></div>`)
-            // $('.results .gallery .petCrate .petImage').append(images)
+            const image = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
+            $(`.results .gallery`).append(
+                `<div class="petCrate">
+                <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
+                <div class="petInfo">
+                        <p>pet:${pet.animal.$t}</p>
+                        <p>age:${pet.age.$t}</p>
+                        <p>size:${pet.size.$t}</p>
+                    <button>more info</button>
+                </div>
+                <div class="discription hide">${pet.description.$t}</div>
+            </div>`
+            );
         }
     })
 }
 
+//getting more info button to work
 
-//need to extract image from ajax object and populate in html gallery
-// artApp.displayArt = function(pieces) {
-//     pieces.forEach(function(piece) {
-//      if(piece.hasImage === true){
-//         const title = $('<h2>').text(piece.title);
-//         const artist = $('<p>').addClass('artist').text(piece.principalOrFirstMaker);
-//         const image = $('<img>').attr('src', piece.webImage.url);
-//         const artPiece = $('<div>').addClass('piece').append(image, title, artist);
-//         $('#artwork').append(artPiece);
-//      }
-//     })
-// }
+
+
 
 

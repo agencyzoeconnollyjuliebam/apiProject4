@@ -180,6 +180,10 @@ html {
   width: 80%;
   margin: 0 auto; }
 
+img {
+  width: 100%;
+  display: block; }
+
 h1 {
   color: #fffffb;
   font-family: "Dosis", sans-serif;
@@ -192,13 +196,31 @@ p {
   font-size: 1.6rem;
   text-transform: lowercase; }
 
+a {
+  text-decoration: none;
+  color: #fffffb;
+  font-family: "Roboto", sans-serif; }
+
 .landingPage {
-  background: url(/assets/dot.jpg);
+  background: url(assets/dot.jpg);
+  background-repeat: no-repeat;
   height: 100vh; }
 
 header {
-  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #1a1a1a;
   height: 75px; }
+  header .wrapper .logo img {
+    width: 125px; }
 
 .content h1 {
   margin: 0; }
@@ -206,3 +228,6 @@ header {
 .content p {
   color: #fffffb;
   text-align: center; }
+
+.hide {
+  display: none; }

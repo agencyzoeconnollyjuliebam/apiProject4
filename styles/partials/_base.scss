@@ -21,6 +21,11 @@ html{
     margin: 0 auto;
 }
 
+img{
+    width: 100%;
+    display: block;
+}
+
 h1{
     color: $primaryColor;
     font-family: $primaryFont;
@@ -34,4 +39,10 @@ p{
     font-size: 1.6rem;
     text-transform: lowercase;
 
+}
+
+a{
+    text-decoration: none;
+    color: $primaryColor;
+    font-family: $secondaryFont;
 }

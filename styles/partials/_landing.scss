@@ -1,11 +1,18 @@
 .landingPage{
-    background: url(/assets/dot.jpg);
+    background: url(assets/dot.jpg);
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
 header{
-    background: black;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background: $secondaryColor;;
     height: 75px;
+    .wrapper .logo img{
+     width: 125px;
+    }
 }
 
 .content{
