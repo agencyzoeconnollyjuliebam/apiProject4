@@ -21,6 +21,11 @@ html{
     margin: 0 auto;
 }
 
+img{
+    width: 100%;
+    display: block;
+}
+
 h1{
     color: $primaryColor;
     font-family: $primaryFont;

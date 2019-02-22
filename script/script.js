@@ -13,6 +13,10 @@ $(document).ready(function(){
 //Initializing the app
 adoptApp.init = function(){
     adoptApp.location();
+    $('.gallery').on('click', 'button', function () {
+        console.log('button being clicked')
+        $(`.discription`).toggleClass('hide');
+    })
 }
 
 //Making Ajax call with userInput location
@@ -67,9 +71,7 @@ adoptApp.print = function (pets){
 
 //getting more info button to work
 
-$('button').on('click', function () {
-    $discription.removeClass('hide');
-})
+
 
 
 

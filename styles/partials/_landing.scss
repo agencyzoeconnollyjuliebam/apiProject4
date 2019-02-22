@@ -5,8 +5,14 @@
 }
 
 header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
     background: $secondaryColor;;
     height: 75px;
+    .wrapper .logo img{
+     width: 125px;
+    }
 }
 
 .content{
