@@ -192,12 +192,18 @@ p {
   font-size: 1.6rem;
   text-transform: lowercase; }
 
+a {
+  text-decoration: none;
+  color: #fffffb;
+  font-family: "Roboto", sans-serif; }
+
 .landingPage {
-  background: url(/assets/dot.jpg);
+  background: url(assets/dot.jpg);
+  background-repeat: no-repeat;
   height: 100vh; }
 
 header {
-  background: black;
+  background: #1a1a1a;
   height: 75px; }
 
 .content h1 {

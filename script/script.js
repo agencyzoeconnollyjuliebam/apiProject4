@@ -35,10 +35,7 @@ adoptApp.getItems = function(location){
         // This is where we put code that will print the data to page
         adoptApp.print(results.petfinder.pets.pet);
 
-
-
-
-        console.log(results.petfinder.pets.pet)//TBD
+        console.log("object we get back?", results.petfinder.pets.pet)//TBD
     })
 }
 
@@ -47,7 +44,7 @@ adoptApp.location = function (){
     $('form').on('submit', function(e){
         e.preventDefault();
         const location = $(this).find('#location').val();
-        console.log(location)
+        console.log("location:", location)
         adoptApp.getItems(location);
         
     }) 
@@ -59,26 +56,29 @@ adoptApp.location = function (){
 adoptApp.print = function (pets){
     pets.forEach(function(pet) {
         if(pet.media.photos.photo) {
-            const images = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
-          console.log(images);
-        
+            const image = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
+            console.log("images:", image);
+
+            // $('.results .gallery').append(`<div class="petCrate"></div>`)
+            // $('.results .gallery .petCrate').append(`<div class="petImage"></div>`)
+            // $('.results .gallery .petCrate .petImage').append(image)
       
 
           
     
  
-    // $(`.results .gallary`).append(
-    //     `<div class="petCrate">
-    //     <div class="img"><img src="${images[0].src}" alt="${images[0].alt}"><div>
-      // <div class="petInfo">
-//              <p>pet:${animal}</p
-//              <p>age:${age}</p>
-//              <p>size:${size}</p>
-    //     <buttion class="moreInfo">more info</button>
-    //     </div>
-    //     <div class="discription"></div>
-    // </div>`
-    // );
+    $(`.results .gallery`).append(
+        `<div class="petCrate">
+        <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
+      <div class="petInfo">
+             <p>pet:${pet.animal.$t}</p>
+             <p>age:${pet.age.$t}</p>
+             <p>size:${pet.size.$t}</p>
+        <button class="moreInfo">more info</button>
+        </div>
+        <div class="discription">${pet.description.$t}</div>
+    </div>`
+    );
 
 
 //Jonathan's example
@@ -97,7 +97,7 @@ adoptApp.print = function (pets){
             // console.log(pet.media.photos.photo[0].$t)
             // $('.results .gallery').append(`<div class="petCrate"></div>`)
             // $('.results .gallery .petCrate').append(`<div class="petImage"></div>`)
-            // $('.results .gallery .petCrate .petImage').append(images)
+            // $('.results .gallery .petCrate .petImage').append(image)
         }
     })
 }

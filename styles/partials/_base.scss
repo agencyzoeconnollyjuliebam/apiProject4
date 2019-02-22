@@ -35,3 +35,9 @@ p{
     text-transform: lowercase;
 
 }
+
+a{
+    text-decoration: none;
+    color: $primaryColor;
+    font-family: $secondaryFont;
+}

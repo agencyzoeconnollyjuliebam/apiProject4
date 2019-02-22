@@ -1,10 +1,11 @@
 .landingPage{
-    background: url(/assets/dot.jpg);
+    background: url(assets/dot.jpg);
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
 header{
-    background: black;
+    background: $secondaryColor;;
     height: 75px;
 }
 
