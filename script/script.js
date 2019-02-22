@@ -60,21 +60,47 @@ adoptApp.print = function (pets){
     pets.forEach(function(pet) {
         if(pet.media.photos.photo) {
             const images = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
-        // for (let i = 0; i < 0; i ++) {
-        //     //We need to create a const that will hold individual photos of each pet item of the ajax array
+          console.log(images);
+        
+      
 
-        //     const individualImage = $(pets).
+          
+    
+ 
+    // $(`.results .gallary`).append(
+    //     `<div class="petCrate">
+    //     <div class="img"><img src="${images[0].src}" alt="${images[0].alt}"><div>
+      // <div class="petInfo">
+//              <p>pet:${animal}</p
+//              <p>age:${age}</p>
+//              <p>size:${size}</p>
+    //     <buttion class="moreInfo">more info</button>
+    //     </div>
+    //     <div class="discription"></div>
+    // </div>`
+    // );
 
-            console.log(pet.media.photos.photo[0].$t)
-            $('.results .gallery').append(`<div class="petCrate"></div>`)
-            $('.results .gallery .petCrate').append(`<div class="petImage"></div>`)
-            $('.results .gallery .petCrate .petImage').append(images)
+
+//Jonathan's example
+            // const markup = `
+            
+            // `
+
+            // pets.forEach((pet,index) => {
+            //     const markup `
+            //         Pet number ${index} is ${arraysomething[index]}
+            //     `
+
+            //     $('.list-parent').append(markup)
+            // })
+
+            // console.log(pet.media.photos.photo[0].$t)
+            // $('.results .gallery').append(`<div class="petCrate"></div>`)
+            // $('.results .gallery .petCrate').append(`<div class="petImage"></div>`)
+            // $('.results .gallery .petCrate .petImage').append(images)
         }
     })
 }
-
-//when user clicks on image , we get a pop-up message with all the pet's info
-
 
 
 //need to extract image from ajax object and populate in html gallery
