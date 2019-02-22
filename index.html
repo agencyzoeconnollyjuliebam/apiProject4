@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="Animal, pet, adoption, finder, love, furry, friend">
     <meta name="description" content="App to find a new furry friend that sutes you!">
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>petLove</title>
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <div class="skipToForm"><a href=""></a></div>
-    </header>
     <section class="landingPage">
-        <div class="content">
+        <header>
+            <div class="wrapper">
+                <div class="logo"></div>
+                <div class="skipToForm"><a href="#adoptionForm">find</a></div>
+            </div>
+        </header>
+        <div class="content wrapper">
             <h1>find. adopt . love</h1>
             <p> Fill out the form below to find your furry friend</p>
             <!-- animated clickable arrow that the user will click on to get to the form -->
@@ -24,8 +29,8 @@
         </div>
     </section>
     <main>
-        <section class="adoptionForm">
-            <form>
+        <section id="adoptionForm">
+            <form class="wrapper">
                 <!-- location? -->
                 <fieldset class="locationQ">
                     <label for="location">What's your location? *</label>
@@ -47,14 +52,16 @@
             </form>
         </section>
         <section class="results">
-            <div class="gallery">
+            <div class="gallery wrapper">
                 
             </div>
         
         </section>
     </main>
     <footer>
-        <p>&#169; made with love and lots of coffee by Z & J 2019</p>
+        <div class="wrapper">
+             <p>&#169; made with love and lots of coffee by Z & J 2019</p>
+        </div>
     </footer>
     
 <!-- scripts -->

@@ -1,0 +1,37 @@
+//varibles
+$primaryFont: 'Dosis', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+$primaryColor: #fffffb;
+$secondaryColor: #1a1a1a;
+
+//mixins
+
+
+
+//gen styles
+
+html{
+    font-size: 125%;
+}
+
+.wrapper{
+    max-width: 1025px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-size: 6rem;
+    text-align: center;
+}
+
+p{
+    color: $secondaryColor;
+    font-family: $secondaryFont;
+    font-size: 1.6rem;
+    text-transform: lowercase;
+
+}
