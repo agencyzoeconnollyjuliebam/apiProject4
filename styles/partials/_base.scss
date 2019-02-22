@@ -5,6 +5,8 @@ $secondaryFont: 'Roboto', sans-serif;
 $primaryColor: #fffffb;
 $secondaryColor: #1a1a1a;
 
+$text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
+
 //mixins
 
 
@@ -30,7 +32,6 @@ h1{
     color: $primaryColor;
     font-family: $primaryFont;
     font-size: 6rem;
-    text-align: center;
 }
 
 p{

@@ -14,8 +14,7 @@ $(document).ready(function(){
 adoptApp.init = function(){
     adoptApp.location();
     $('.gallery').on('click', 'button', function () {
-        console.log('button being clicked')
-        $(`.discription`).toggleClass('hide');
+        $(this).closest('.petCrate').find('.discription').toggleClass('hide')
     })
 }
 
@@ -55,14 +54,14 @@ adoptApp.print = function (pets){
             const image = $(`<img>`).attr('src', pet.media.photos.photo[2].$t);
             $(`.results .gallery`).append(
                 `<div class="petCrate">
-                <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
-                <div class="petInfo">
-                        <p>pet:${pet.animal.$t}</p>
-                        <p>age:${pet.age.$t}</p>
-                        <p>size:${pet.size.$t}</p>
-                    <button>more info</button>
-                </div>
-                <div class="discription hide">${pet.description.$t}</div>
+                    <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
+                    <div id="${pet.name.$t}" class="petInfo">
+                            <p>pet:${pet.animal.$t}</p>
+                            <p>age:${pet.age.$t}</p>
+                            <p>size:${pet.size.$t}</p>
+                        <button>more info</button>
+                    </div>
+                     <div class="discription hide">${pet.description.$t}</div>
             </div>`
             );
         }

@@ -187,8 +187,7 @@ img {
 h1 {
   color: #fffffb;
   font-family: "Dosis", sans-serif;
-  font-size: 6rem;
-  text-align: center; }
+  font-size: 6rem; }
 
 p {
   color: #1a1a1a;
@@ -204,30 +203,41 @@ a {
 .landingPage {
   background: url(assets/dot.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: 100vh; }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   background: #1a1a1a;
   height: 75px; }
-  header .wrapper .logo img {
-    width: 125px; }
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    header .wrapper .logo img {
+      width: 125px; }
+    header .wrapper .logo, header .wrapper .skipToForm {
+      margin: 2%; }
 
-.content h1 {
-  margin: 0; }
-
-.content p {
-  color: #fffffb;
+.content {
   text-align: center; }
+  .content h1 {
+    margin: 10% 0 0 0;
+    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
+  .content p {
+    color: #fffffb;
+    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
+  .content i {
+    font-size: 4rem;
+    margin-top: 20%;
+    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
 
 .hide {
   display: none; }
