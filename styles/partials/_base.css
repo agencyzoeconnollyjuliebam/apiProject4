@@ -1,0 +1,19 @@
+html {
+  font-size: 125%; }
+
+.wrapper {
+  max-width: 1025px;
+  width: 80%;
+  margin: 0 auto; }
+
+h1 {
+  color: #fffffb;
+  font-family: "Dosis", sans-serif;
+  font-size: 6rem;
+  text-align: center; }
+
+p {
+  color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  text-transform: lowercase; }

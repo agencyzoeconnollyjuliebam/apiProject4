@@ -1,0 +1,46 @@
+    $(`.results .gallary`).append(
+        `<div class="petCrate">
+        <div class="img"><img src="${images[0].src}" alt="${images[0].alt}"><div>
+      <div class="petInfo">
+             
+        <buttion class="moreInfo">more info</button>
+        </div>
+        <div class="discription"></div>
+    </div>`
+    );
+
+
+//Jonathan's example
+            // const markup = `
+            
+            // `
+
+            // pets.forEach((pet,index) => {
+            //     const markup `
+            //         Pet number ${index} is ${arraysomething[index]}
+            //     `
+
+            //     $('.list-parent').append(markup)
+            // })
+        }
+    })
+}
+
+
+//need to extract image from ajax object and populate in html gallery
+// artApp.displayArt = function(pieces) {
+//     pieces.forEach(function(piece) {
+//      if(piece.hasImage === true){
+//         const title = $('<h2>').text(piece.title);
+//         const artist = $('<p>').addClass('artist').text(piece.principalOrFirstMaker);
+//         const image = $('<img>').attr('src', piece.webImage.url);
+//         const artPiece = $('<div>').addClass('piece').append(image, title, artist);
+//         $('#artwork').append(artPiece);
+//      }
+//     })
+// }
+
+
+// <p>pet:${animal}</p
+//              <p>age:${age}</p>
+//              <p>size:${size}</p>
