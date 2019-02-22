@@ -56,14 +56,20 @@ adoptApp.print = function (pets){
                         <p>pet:${pet.animal.$t}</p>
                         <p>age:${pet.age.$t}</p>
                         <p>size:${pet.size.$t}</p>
-                    <button class="moreInfo">more info</button>
+                    <button>more info</button>
                 </div>
-                <div class="discription">${pet.description.$t}</div>
+                <div class="discription hide">${pet.description.$t}</div>
             </div>`
             );
         }
     })
 }
+
+//getting more info button to work
+
+$('button').on('click', function () {
+    $discription.removeClass('hide');
+})
 
 
 

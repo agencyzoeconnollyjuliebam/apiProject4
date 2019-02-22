@@ -212,3 +212,6 @@ header {
 .content p {
   color: #fffffb;
   text-align: center; }
+
+.hide {
+  display: none; }
