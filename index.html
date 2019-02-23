@@ -37,16 +37,17 @@
                 <!-- location? -->
                 <fieldset class="locationQ">
                     <label for="location">What's your location? *</label>
-                    <input type="text"  id="location">
+                    <input type="text"  id="location" placeholder="i.e. Toronto, ON" required>
                 </fieldset>
-                <!-- cat or dog? later prob -->
-                <!-- <fieldset>
-                    <label for="cat">Cat</label>
-                    <input type="radio" name="animal" id="cat">
-
-                    <label for="dog">Dog</label>
-                    <input type="radio" name="animal" id="dog">
-                </fieldset> -->
+                <!-- animal -->
+                <fieldset>
+                    <label for="animal">pick a pet animal from the list</label>
+                    <select name="animal" id="animal">
+                            <option value="cat">cat</option>
+                            <option value="dog">dog</option>
+                            <option value="reptile">reptile</option>
+                    </select>
+                </fieldset>
                 <!-- submit -->
                 <fieldset>
                     <label for="find">Submit</label>
