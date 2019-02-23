@@ -68,7 +68,7 @@ adoptApp.print = function (pets){
     pets.forEach(function(pet) {
         $(`.results .gallery`).append(
                 ` <div class="petCrate">
-                     <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
+                <img class="petImage" src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}">
                      <div id="${pet.name.$t}" class="petInfo">
                          <p><span>name:</span> ${pet.name.$t}</p>
                          <p><span>pet:</span> ${pet.animal.$t}</p>

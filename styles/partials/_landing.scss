@@ -31,11 +31,27 @@ header{
         margin: 10% 0 0 0;
        text-shadow: $text-shadow;
     }
-    
     i{
         font-size: 4rem;
         margin-top: 20%;
         text-shadow: $text-shadow;
+    }
+
+}
+
+footer {
+    background: $secondaryColor;
+    margin: 0;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+        color: $primaryColor;
+        font-size: 0.75rem;
+        text-transform: none;
+        font-weight: 700;
+        
     }
 
 }

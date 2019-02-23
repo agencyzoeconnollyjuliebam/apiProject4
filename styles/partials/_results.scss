@@ -19,15 +19,23 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        .petImage {
-            width: 320px;
-            // height: 320px;
-            margin-right: 5%;
-            img {
-                object-fit: contain;
-                height: 100%;
-            }
+        margin: 5% 0;
+        border-bottom: 2px dotted $tertiaryColor;
+        .discription {
+            font-family: $secondaryFont;
+            line-height: 1.6rem;
+            color: $secondaryColor;
+            margin: 1% 0 2% 0;
+
         }
+
+        .petImage {
+            display: block;
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            margin: 0 5% 5% 0;
+            } 
         .petInfo {
             width: calc(95% - 320px);
             p {
