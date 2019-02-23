@@ -2,8 +2,10 @@
 $primaryFont: 'Dosis', sans-serif;
 $secondaryFont: 'Roboto', sans-serif;
 
+
 $primaryColor: #fffffb;
 $secondaryColor: #1a1a1a;
+$tertiaryColor: #88849b;
 
 $text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
 
@@ -32,6 +34,10 @@ h1{
     color: $primaryColor;
     font-family: $primaryFont;
     font-size: 6rem;
+}
+
+h2{
+    text-transform: lowercase;
 }
 
 p{

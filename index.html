@@ -7,7 +7,7 @@
     <meta name="keywords" content="Animal, pet, adoption, finder, love, furry, friend">
     <meta name="description" content="App to find a new furry friend that sutes you!">
     <!-- googlefont -->
-    <link href="https://fonts.googleapis.com/css?family=Dosis:700|Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700" rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -24,7 +24,7 @@
         </header>
         <div class="content wrapper">
             <h1>find. adopt . love</h1>
-            <p> Fill out the form below to find your furry friend</p>
+            
             <!-- animated clickable arrow that the user will click on to get to the form -->
             <div>
                 <a href="#adoptionForm"><i class="fas fa-arrow-circle-down"></i></a>
@@ -32,11 +32,14 @@
         </div>
     </section>
     <main>
-        <section id="adoptionForm">
+        <section class="adoptionForm" id="adoptionForm">
+            <div class="wrapper">
+                <h2>Fill out the form below to find your furry friend</h2>
+            </div>
             <form class="wrapper">
                 <!-- location? -->
                 <fieldset class="locationQ">
-                    <label for="location">What's your location? *</label>
+                    <label for="location">What's your location?</label>
                     <input type="text"  id="location" placeholder="i.e. Toronto, ON" required>
                 </fieldset>
                 <!-- animal -->
@@ -49,8 +52,8 @@
                     </select>
                 </fieldset>
                 <!-- submit -->
-                <fieldset>
-                    <label for="find">Submit</label>
+                <fieldset class="submit ">
+                    <label class="visuallyHidden" for="find">Submit</label>
                     <input type='submit' value="Find" id="find">
                 </fieldset>
             </form>

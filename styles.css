@@ -172,6 +172,20 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
 html {
   font-size: 125%; }
 
@@ -188,6 +202,9 @@ h1 {
   color: #fffffb;
   font-family: "Dosis", sans-serif;
   font-size: 6rem; }
+
+h2 {
+  text-transform: lowercase; }
 
 p {
   color: #1a1a1a;
@@ -231,13 +248,68 @@ header {
   .content h1 {
     margin: 10% 0 0 0;
     text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
-  .content p {
-    color: #fffffb;
-    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
   .content i {
     font-size: 4rem;
     margin-top: 20%;
     text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
+
+.adoptionForm {
+  background: #fffffb;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .adoptionForm .wrapper h2 {
+    color: #1a1a1a;
+    font-size: 2.0rem;
+    font-family: "Dosis", sans-serif;
+    margin-bottom: 5%;
+    text-align: center; }
+
+form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 30px 0;
+  border: none; }
+  form fieldset label {
+    font-family: "Dosis", sans-serif;
+    color: #1a1a1a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding-top: 15px;
+    text-transform: lowercase; }
+  form fieldset input, form fieldset select {
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    color: #a1a1a1; }
+  form fieldset input[type=submit] {
+    margin: 5%  auto 0 auto;
+    text-transform: lowercase;
+    background-color: #88849b;
+    color: #fffffb;
+    font-family: "Dosis", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 30%;
+    border: none;
+    cursor: pointer; }
 
 .hide {
   display: none; }
