@@ -10,7 +10,18 @@ $tertiaryColor: #88849b;
 $text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
 
 //mixins
-
+@mixin buttonStyle {
+    margin: 5%  auto 0 auto;
+    text-transform: lowercase;
+    background-color: $tertiaryColor;
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 30%;
+    border: none;
+    cursor: pointer;  
+}
 
 
 //gen styles
@@ -38,6 +49,11 @@ h1{
 
 h2{
     text-transform: lowercase;
+    color: $secondaryColor;
+        font-size: 3.0rem;
+        font-family: $primaryFont;
+        margin-bottom: 5%;
+        text-align: center;
 }
 
 p{

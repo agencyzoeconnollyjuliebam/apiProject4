@@ -1,3 +1,48 @@
 .hide{
     display: none;
 }
+
+.results {
+    background: $primaryColor;
+    .galleryHeader {
+        h2 {
+        margin: 0;
+        padding-top: 5%;
+        }
+        p {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 10%;
+        }
+    }
+    .gallery .petCrate {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .petImage {
+            width: 320px;
+            // height: 320px;
+            margin-right: 5%;
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+        .petInfo {
+            width: calc(95% - 320px);
+            p {
+                margin: 10px 0 0 0;
+            }
+            span {
+                font-weight: 700;
+            }
+            button {
+                @include buttonStyle;
+                font-size: 1.25rem;
+                width: 40%;
+                padding: 10px 0 15px 0;
+                border-radius: 5px;
+            }
+        }
+    }
+}
