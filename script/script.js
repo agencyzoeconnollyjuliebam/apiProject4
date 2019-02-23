@@ -62,7 +62,6 @@ adoptApp.location = function (){
 adoptApp.print = function (pets){
     pets.forEach(function(pet) {
 
-
             $(`.results .gallery`).append(
                 `<div class="petCrate">
                     <div class="petImage"><img src="${pet.media.photos.photo[2].$t}" alt="${pet.name.$t}"></div>
