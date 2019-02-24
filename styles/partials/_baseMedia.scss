@@ -1,6 +1,13 @@
-@media (max-width:1000px){
+@media (max-width: 1025px){
 //gen styles
     h1{
         font-size: 4rem;
     }
-};
+}
+@media (max-width: 690px){
+    //gen styles
+        h1{
+            font-size: 3rem;
+        }
+     
+    }

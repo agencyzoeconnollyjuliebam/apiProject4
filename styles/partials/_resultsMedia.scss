@@ -15,8 +15,11 @@
     }
 }
 @media(max-width: 700px){
-    .gallery .petCrate {
+    
+
+   .results .gallery .petCrate {
         flex-direction:column;
+
         .discription {
             font-family: $secondaryFont;
             line-height: 1.6rem;
@@ -32,8 +35,20 @@
             margin: 0 5% 5% 0;
             } 
         .petInfo {
-            height:320px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height:200px;
             width: 100%;
+            p {
+                width: 50%;
+            }
+        }
+
+        button {
+            @include buttonStyle;
+            margin: 10px 0;
+            width: 50%;
+        
         }
     }
 }

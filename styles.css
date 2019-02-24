@@ -255,7 +255,7 @@ header {
     text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
   .content i {
     font-size: 4rem;
-    margin-top: 20%;
+    margin-top: 150px;
     text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
 
 footer {
@@ -402,22 +402,28 @@ form fieldset {
         padding: 10px 0 15px 0;
         border-radius: 5px; }
 
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
   h1 {
     font-size: 4rem; } }
+
+@media (max-width: 690px) {
+  h1 {
+    font-size: 3rem; } }
 
 @media (max-width: 1000px) {
   .content h1 {
     margin-top: 20%; }
   .content i {
-    font-size: 4rem;
-    margin-top: 35%; } }
+    font-size: 4rem; } }
 
 @media (max-width: 930px) {
   .content h1 {
-    margin-top: 30%; }
-  .content i {
     margin-top: 30%; } }
+
+@media (max-width: 680px) {
+  .content i {
+    font-size: 3.0rem;
+    margin-top: 200px; } }
 
 @media (max-width: 930px) {
   p {
@@ -448,6 +454,10 @@ form fieldset {
   form input#find {
     margin: 0; } }
 
+@media (max-width: 700px) {
+  .adoptionForm h2 {
+    margin-top: 20%; } }
+
 @media (max-width: 930px) {
   .results .galleryHeader p {
     font-size: 1.2rem; } }
@@ -457,23 +467,44 @@ form fieldset {
     width: 75%; } }
 
 @media (max-width: 700px) {
-  .gallery .petCrate {
+  .results .gallery .petCrate {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .gallery .petCrate .discription {
+    .results .gallery .petCrate .discription {
       font-family: "Roboto", sans-serif;
       line-height: 1.6rem;
       color: #1a1a1a;
       margin: 1% 0 2% 0; }
-    .gallery .petCrate .petImage {
+    .results .gallery .petCrate .petImage {
       display: block;
       width: 100%;
       height: auto;
       -o-object-fit: cover;
       object-fit: cover;
       margin: 0 5% 5% 0; }
-    .gallery .petCrate .petInfo {
-      height: 320px;
-      width: 100%; } }
+    .results .gallery .petCrate .petInfo {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      height: 200px;
+      width: 100%; }
+      .results .gallery .petCrate .petInfo p {
+        width: 50%; }
+    .results .gallery .petCrate button {
+      margin: 0;
+      text-transform: lowercase;
+      background-color: #88849b;
+      color: #fffffb;
+      font-family: "Dosis", sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      width: 30%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 50%; } }
