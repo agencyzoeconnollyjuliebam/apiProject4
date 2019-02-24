@@ -1,0 +1,33 @@
+@media(max-width: 930px){
+  p{
+    font-size: 1.2rem;
+    }
+
+    form {
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+            }
+        label {
+          margin-bottom: 30px;
+        }
+        input, select{
+            width: 50%;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: $secondaryFont;
+            color: #a1a1a1; 
+        }
+        input#find{
+          margin:0;
+        }
+    }
+} 
+       
+
+
+
+

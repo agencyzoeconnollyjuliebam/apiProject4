@@ -28,7 +28,6 @@
             margin: 1% 0 2% 0;
 
         }
-
         .petImage {
             display: block;
             width: 320px;
@@ -37,9 +36,13 @@
             margin: 0 5% 5% 0;
             } 
         .petInfo {
+            display: flex;
+            flex-direction: column;
+            height:320px;
             width: calc(95% - 320px);
             p {
                 margin: 10px 0 0 0;
+                flex: 1 0 auto;
             }
             span {
                 font-weight: 700;

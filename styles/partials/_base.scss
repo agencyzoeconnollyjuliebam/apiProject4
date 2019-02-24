@@ -11,7 +11,7 @@ $text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
 
 //mixins
 @mixin buttonStyle {
-    margin: 5%  auto 0 auto;
+    margin:  0;
     text-transform: lowercase;
     background-color: $tertiaryColor;
     color: $primaryColor;

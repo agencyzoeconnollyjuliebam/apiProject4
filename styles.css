@@ -246,12 +246,12 @@ header {
     header .wrapper .logo img {
       width: 125px; }
     header .wrapper .logo, header .wrapper .skipToForm {
-      margin: 2%; }
+      padding: 22px; }
 
 .content {
   text-align: center; }
   .content h1 {
-    margin: 10% 0 0 0;
+    margin-top: 10%;
     text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
   .content i {
     font-size: 4rem;
@@ -321,7 +321,7 @@ form fieldset {
     font-family: "Roboto", sans-serif;
     color: #a1a1a1; }
   form fieldset input[type=submit] {
-    margin: 5%  auto 0 auto;
+    margin: 0;
     text-transform: lowercase;
     background-color: #88849b;
     color: #fffffb;
@@ -330,7 +330,8 @@ form fieldset {
     font-size: 1.6rem;
     width: 30%;
     border: none;
-    cursor: pointer; }
+    cursor: pointer;
+    margin: 0 auto; }
 
 .hide {
   display: none; }
@@ -369,13 +370,24 @@ form fieldset {
       object-fit: cover;
       margin: 0 5% 5% 0; }
     .results .gallery .petCrate .petInfo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: 320px;
       width: calc(95% - 320px); }
       .results .gallery .petCrate .petInfo p {
-        margin: 10px 0 0 0; }
+        margin: 10px 0 0 0;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto; }
       .results .gallery .petCrate .petInfo span {
         font-weight: 700; }
       .results .gallery .petCrate .petInfo button {
-        margin: 5%  auto 0 auto;
+        margin: 0;
         text-transform: lowercase;
         background-color: #88849b;
         color: #fffffb;
@@ -389,3 +401,79 @@ form fieldset {
         width: 40%;
         padding: 10px 0 15px 0;
         border-radius: 5px; }
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 4rem; } }
+
+@media (max-width: 1000px) {
+  .content h1 {
+    margin-top: 20%; }
+  .content i {
+    font-size: 4rem;
+    margin-top: 35%; } }
+
+@media (max-width: 930px) {
+  .content h1 {
+    margin-top: 30%; }
+  .content i {
+    margin-top: 30%; } }
+
+@media (max-width: 930px) {
+  p {
+    font-size: 1.2rem; }
+  form fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 30px auto; }
+  form label {
+    margin-bottom: 30px; }
+  form input, form select {
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    color: #a1a1a1; }
+  form input#find {
+    margin: 0; } }
+
+@media (max-width: 930px) {
+  .results .galleryHeader p {
+    font-size: 1.2rem; } }
+
+@media (max-width: 820px) {
+  .results .gallery .petCrate .petInfo button {
+    width: 75%; } }
+
+@media (max-width: 700px) {
+  .gallery .petCrate {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .gallery .petCrate .discription {
+      font-family: "Roboto", sans-serif;
+      line-height: 1.6rem;
+      color: #1a1a1a;
+      margin: 1% 0 2% 0; }
+    .gallery .petCrate .petImage {
+      display: block;
+      width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover;
+      margin: 0 5% 5% 0; }
+    .gallery .petCrate .petInfo {
+      height: 320px;
+      width: 100%; } }

@@ -34,8 +34,9 @@ form {
 
         input[type=submit] {
            @include buttonStyle;
+           margin: 0 auto;
             
         }
-}
-    } 
+    }
+} 
    
