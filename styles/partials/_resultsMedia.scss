@@ -15,7 +15,10 @@
     }
 }
 @media(max-width: 700px){
-    
+    .results .gallery .petCrate .petInfo button {
+        width: 40%;
+        margin: 23px 0;
+    }
 
    .results .gallery .petCrate {
         flex-direction:column;
@@ -30,7 +33,7 @@
         .petImage {
             display: block;
             width: 100%;
-            height: auto;
+            // height: auto;
             object-fit: cover;
             margin: 0 5% 5% 0;
             } 
@@ -43,13 +46,21 @@
                 width: 50%;
             }
         }
-
-        button {
-            @include buttonStyle;
-            margin: 10px 0;
-            width: 50%;
-        
+    }
+}
+@media (max-width: 400px) {
+    .results .gallery .petCrate .petInfo button {
+        width: 100%;
+    }
+    .results .gallery .petCrate {
+        .petInfo {
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
+
+
+
 }
 

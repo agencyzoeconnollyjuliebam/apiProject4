@@ -456,7 +456,17 @@ form fieldset {
 
 @media (max-width: 700px) {
   .adoptionForm h2 {
-    margin-top: 20%; } }
+    margin-top: 10%; }
+  form fieldset {
+    margin: 15px auto; } }
+
+@media (max-width: 450px) {
+  p {
+    font-size: 0.9rem; }
+  form fieldset input, form fieldset select {
+    width: 100%; }
+  form fieldset input[type="submit"] {
+    width: 100%; } }
 
 @media (max-width: 930px) {
   .results .galleryHeader p {
@@ -467,6 +477,9 @@ form fieldset {
     width: 75%; } }
 
 @media (max-width: 700px) {
+  .results .gallery .petCrate .petInfo button {
+    width: 40%;
+    margin: 23px 0; }
   .results .gallery .petCrate {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -480,7 +493,6 @@ form fieldset {
     .results .gallery .petCrate .petImage {
       display: block;
       width: 100%;
-      height: auto;
       -o-object-fit: cover;
       object-fit: cover;
       margin: 0 5% 5% 0; }
@@ -494,17 +506,10 @@ form fieldset {
       height: 200px;
       width: 100%; }
       .results .gallery .petCrate .petInfo p {
-        width: 50%; }
-    .results .gallery .petCrate button {
-      margin: 0;
-      text-transform: lowercase;
-      background-color: #88849b;
-      color: #fffffb;
-      font-family: "Dosis", sans-serif;
-      font-weight: 700;
-      font-size: 1.6rem;
-      width: 30%;
-      border: none;
-      cursor: pointer;
-      margin: 10px 0;
-      width: 50%; } }
+        width: 50%; } }
+
+@media (max-width: 400px) {
+  .results .gallery .petCrate .petInfo button {
+    width: 100%; }
+  .results .gallery .petCrate .petInfo p {
+    font-size: 0.9rem; } }

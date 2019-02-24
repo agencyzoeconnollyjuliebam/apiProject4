@@ -28,9 +28,32 @@
 } 
        
 @media (max-width: 700px) {
-  .adoptionForm h2 {
-    margin-top: 20%;
+    .adoptionForm h2 {
+      margin-top: 10%;
+    }
+
+    form{
+      fieldset {
+        margin: 15px auto;
+      }
+    } 
   }
+
+@media (max-width: 450px) {
+      p {
+        font-size: 0.9rem;
+      }
+      form {
+          fieldset {
+              input, select {
+                width: 100%;
+              }
+          input[type="submit"] {
+              width: 100%;
+          }
+        }
+         
+      }
 }
 
 
