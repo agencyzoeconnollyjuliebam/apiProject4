@@ -27,7 +27,6 @@ adoptApp.getItems = function(location, animal){
         dataType: "jsonp",
         data: {
             key: adoptApp.apiKey,
-            //make sure its city  and provence 
             location: location,
             animal: animal,
             output: 'basic',
@@ -39,7 +38,7 @@ adoptApp.getItems = function(location, animal){
             adoptApp.print(results.petfinder.pets.pet);
         } 
     }).catch((error) => {
-          alert('try again', error)
+          alert('Try again. Type city and province/state.', error)
     }  )
 }
 

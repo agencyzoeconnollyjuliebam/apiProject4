@@ -1,12 +1,13 @@
 //varibles
+
+//fonts
 $primaryFont: 'Dosis', sans-serif;
 $secondaryFont: 'Roboto', sans-serif;
-
-
+//colors
 $primaryColor: #fffffb;
 $secondaryColor: #1a1a1a;
 $tertiaryColor: #88849b;
-
+//shadow
 $text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9);
 
 //mixins
@@ -29,7 +30,6 @@ $text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9);
 
 
 //gen styles
-
 html{
     font-size: 125%;
     scroll-behavior: smooth;

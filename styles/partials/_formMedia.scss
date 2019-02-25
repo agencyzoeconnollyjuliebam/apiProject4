@@ -1,59 +1,59 @@
 @media(max-width: 930px){
   p{
     font-size: 1.2rem;
-    }
+  }
 
-    form {
-        fieldset {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 30px auto;
-            }
-        label {
-          margin-bottom: 30px;
-        }
-        input, select{
-            width: 50%;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: $secondaryFont;
-            color: #a1a1a1; 
-        }
-        input#find{
-          margin:0;
-        }
+  form {
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;        
+      margin: 30px auto;
     }
+    label {
+      margin-bottom: 30px;
+    }
+    input, select {
+      width: 50%;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: $secondaryFont;        
+      color: #a1a1a1; 
+    }
+    input#find{
+      margin:0;
+    }
+  }
 } 
        
 @media (max-width: 700px) {
-    .adoptionForm h2 {
-      margin-top: 10%;
-    }
-
-    form{
-      fieldset {
-        margin: 15px auto;
-      }
-    } 
+  .adoptionForm h2 {
+    margin-top: 10%;
   }
 
+  form{
+    fieldset {
+      margin: 15px auto;
+    }
+  } 
+}
+
 @media (max-width: 450px) {
-      p {
-        font-size: 0.9rem;
+  p {
+    font-size: 0.9rem;
+  }
+
+  form {
+    fieldset {
+      input, select {
+        width: 100%;
       }
-      form {
-          fieldset {
-              input, select {
-                width: 100%;
-              }
-          input[type="submit"] {
-              width: 100%;
-          }
-        }
-         
+      input[type="submit"] {
+        width: 100%;
       }
+    }    
+  }
 }
 
 

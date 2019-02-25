@@ -13,17 +13,16 @@ header{
         display: flex;
         flex-direction:row;
         justify-content: space-between;
-        
         .logo img{
         width: 125px;
-         }
+        }
         .logo, .skipToForm{
             padding: 22px;
         }
         .skipToForm a{
             transition: border-bottom .3s ease;
             &:hover{
-                 border-bottom: 2px solid $primaryColor;
+                border-bottom: 2px solid $primaryColor;
             }
         }
     }   
@@ -44,7 +43,6 @@ header{
             font-size: 4.2rem;
         }
     }
-
 }
 
 footer {
@@ -58,8 +56,6 @@ footer {
         color: $primaryColor;
         font-size: 0.75rem;
         text-transform: none;
-        font-weight: 700;
-        
+        font-weight: 700;  
     }
-
 }
