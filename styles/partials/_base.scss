@@ -7,7 +7,7 @@ $primaryColor: #fffffb;
 $secondaryColor: #1a1a1a;
 $tertiaryColor: #88849b;
 
-$text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
+$text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9);
 
 //mixins
 @mixin buttonStyle {
@@ -21,6 +21,10 @@ $text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
     width: 30%;
     border: none;
     cursor: pointer;  
+    transition: box-shadow  .3s ease;
+    &:hover{
+        box-shadow: 2px 3px 6px rgba(26, 26, 26, 0.5);
+    }
 }
 
 
@@ -28,6 +32,7 @@ $text-shadow: 2px 3px 6px rgba( 	26, 26, 26, 0.9);
 
 html{
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 
 .wrapper{

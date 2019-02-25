@@ -31,11 +31,9 @@ form {
             font-family: $secondaryFont;
             color: #a1a1a1; 
         }
-
         input[type=submit] {
            @include buttonStyle;
-           margin: 0 auto;
-            
+           margin: 0 auto;       
         }
     }
 } 

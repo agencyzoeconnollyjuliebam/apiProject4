@@ -187,7 +187,8 @@ template {
   /* 1 */ }
 
 html {
-  font-size: 125%; }
+  font-size: 125%;
+  scroll-behavior: smooth; }
 
 .wrapper {
   max-width: 1025px;
@@ -247,6 +248,12 @@ header {
       width: 125px; }
     header .wrapper .logo, header .wrapper .skipToForm {
       padding: 22px; }
+    header .wrapper .skipToForm a {
+      -webkit-transition: border-bottom .3s ease;
+      -o-transition: border-bottom .3s ease;
+      transition: border-bottom .3s ease; }
+      header .wrapper .skipToForm a:hover {
+        border-bottom: 2px solid #fffffb; }
 
 .content {
   text-align: center; }
@@ -256,7 +263,12 @@ header {
   .content i {
     font-size: 4rem;
     margin-top: 150px;
-    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9); }
+    text-shadow: 2px 3px 6px rgba(26, 26, 26, 0.9);
+    -webkit-transition: font-size .3s ease;
+    -o-transition: font-size .3s ease;
+    transition: font-size .3s ease; }
+    .content i:hover {
+      font-size: 4.2rem; }
 
 footer {
   background: #1a1a1a;
@@ -331,7 +343,15 @@ form fieldset {
     width: 30%;
     border: none;
     cursor: pointer;
+    -webkit-transition: -webkit-box-shadow  .3s ease;
+    transition: -webkit-box-shadow  .3s ease;
+    -o-transition: box-shadow  .3s ease;
+    transition: box-shadow  .3s ease;
+    transition: box-shadow  .3s ease, -webkit-box-shadow  .3s ease;
     margin: 0 auto; }
+    form fieldset input[type=submit]:hover {
+      -webkit-box-shadow: 2px 3px 6px rgba(26, 26, 26, 0.5);
+      box-shadow: 2px 3px 6px rgba(26, 26, 26, 0.5); }
 
 .hide {
   display: none; }
@@ -397,10 +417,18 @@ form fieldset {
         width: 30%;
         border: none;
         cursor: pointer;
+        -webkit-transition: -webkit-box-shadow  .3s ease;
+        transition: -webkit-box-shadow  .3s ease;
+        -o-transition: box-shadow  .3s ease;
+        transition: box-shadow  .3s ease;
+        transition: box-shadow  .3s ease, -webkit-box-shadow  .3s ease;
         font-size: 1.25rem;
         width: 40%;
         padding: 10px 0 15px 0;
         border-radius: 5px; }
+        .results .gallery .petCrate .petInfo button:hover {
+          -webkit-box-shadow: 2px 3px 6px rgba(26, 26, 26, 0.5);
+          box-shadow: 2px 3px 6px rgba(26, 26, 26, 0.5); }
 
 @media (max-width: 1025px) {
   h1 {

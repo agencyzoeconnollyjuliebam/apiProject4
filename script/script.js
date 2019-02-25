@@ -35,11 +35,9 @@ adoptApp.getItems = function(location, animal){
         }
     }).then((results) => {
         const pets = results.petfinder.pets;
-        console.log(results);
         if (results.petfinder.pets){
             adoptApp.print(results.petfinder.pets.pet);
-       }
-        
+        } 
     }).catch((error) => {
           alert('try again', error)
     }  )
@@ -52,7 +50,6 @@ adoptApp.location = function (){
         $('.gallery').empty();
         const location = $(this).find('#location').val();
         const animal = $(this).find('#animal').val();
-        console.log("location:", location)
         adoptApp.getItems(location, animal);   
     }) 
 }
@@ -81,4 +78,5 @@ adoptApp.print = function (pets){
             )  
         }
     )};
+
 
